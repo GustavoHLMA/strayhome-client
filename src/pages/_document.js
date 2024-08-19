@@ -47,7 +47,19 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{/* Coloque suas meta tags e links globais aqui */}</Head>
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
+          {/* Coloque suas meta tags e links globais aqui */}
+        </Head>
         <body>
           <Main />
           <NextScript />
