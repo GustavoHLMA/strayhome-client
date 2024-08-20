@@ -23,6 +23,7 @@ export const Content = styled.div`
     width: 61.88rem;
     height: 30rem;
     flex-shrink: 0;
+    font-family: 'Lato';
 `;
 
 export const PawImage1 = styled.img`
@@ -32,6 +33,52 @@ export const PawImage1 = styled.img`
     flex-shrink: 0;
     left: 10px;
     bottom: 10px;
+    z-index: 1;
+`;
+
+export const PawImage2 = styled.img`
+    position: absolute;
+    width: 5.99513rem;
+    height: 5.34181rem;
+    transform: rotate(-81.313deg);
+    flex-shrink: 0;
+    flex-shrink: 0;
+    right: 18px;
+    bottom: 26px;
+    z-index: 1;
+`;
+
+export const PawImage3 = styled.img`
+    position: absolute;
+    width: 4.02656rem;
+    height: 3.58781rem;
+    transform: rotate(-64.546deg);
+    flex-shrink: 0;
+    flex-shrink: 0;
+    right: 18px;
+    top: 26px;
+    z-index: 1;
+`;
+
+export const PawImage4 = styled.img`
+    position: absolute;
+    width: 7.81563rem;
+    height: 6.964rem;
+    transform: rotate(-60.546deg);
+    flex-shrink: 0;
+    flex-shrink: 0;
+    right: 35px;
+    top: 126px;
+    z-index: 1;
+`;
+
+export const PawImage5 = styled.img`
+    position: absolute;
+    width: 7.90019rem;
+    height: 7.03931rem;
+    flex-shrink: 0;
+    left: 18px;
+    top: 18px;
     z-index: 1;
 `;
 
@@ -59,30 +106,62 @@ export const FormSection = styled.div`
     padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    font-family: 'Lato';
+    width: 100%;
+
+    .form-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .input-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+    
 `;
 
-export const Form = styled.form`
-    width: 400px;
+export const Title = styled.div`
+    color: #1E1E1E;
+    font-family: Lato;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 108.036%; /* 3.37613rem */
+    margin-top: 11px;
+    margin-bottom: 11px
+`;
+
+export const ImageUpload = styled.div`
+    width: 14.1875rem;
+    height: 8.875rem;
+    flex-shrink: 0;
+    background-color: #e5e5e5;
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    .image-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #7a7a7a;
+    }
 `;
 
-export const Input = styled.input`
+export const InputGroup = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-`;
-
-export const Button = styled.button`
-    width: 100%;
-    padding: 10px;
-    background-color: #FDBD12;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    cursor: pointer;
+    margin-bottom: 1rem;
 `;
