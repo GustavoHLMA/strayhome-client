@@ -106,7 +106,7 @@ export const FormSection = styled.div`
     padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     font-family: 'Lato';
     width: 100%;
@@ -123,9 +123,9 @@ export const FormSection = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 70%; /* Ajuste conforme necessário para expandir os campos */
         margin-left: 20px;
     }
-    
 `;
 
 export const Title = styled.div`
@@ -140,15 +140,13 @@ export const Title = styled.div`
 `;
 
 export const ImageUpload = styled.div`
-    width: 14.1875rem;
-    height: 8.875rem;
-    flex-shrink: 0;
+    width: 12rem;
+    height: calc(4.875rem + 1.5rem + 5rem + 1.5rem); /* Altura combinada dos campos */
     background-color: #e5e5e5;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
     .image-placeholder {
         display: flex;
         flex-direction: column;
@@ -163,5 +161,6 @@ export const InputGroup = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    gap: 0.5rem; /* Reduz o espaço entre os campos */
 `;
