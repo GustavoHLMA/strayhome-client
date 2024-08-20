@@ -161,6 +161,5 @@ export const InputGroup = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 1rem;
     gap: 0.5rem; /* Reduz o espaço entre os campos */
 `;

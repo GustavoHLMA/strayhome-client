@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Container,
     Content,
@@ -15,8 +15,40 @@ import {
     InputGroup
 } from './styles';
 import { TextField, Button, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { createAnimal, getUserByEmail } from '@/services/api';
 
 const CreatePetProfile: React.FC = () => {
+    const [name, setName] = useState('');
+    const [bio, setBio] = useState('');
+    const [species, setSpecies] = useState('');
+    const [image, setImage] = useState('');
+    const [gender, setGender] = useState('');
+    const [email, setEmail] = useState('');
+
+    const handleSubmit = async () => {
+        try {
+            
+            const user = await getUserByEmail(email);
+            const ownerId = user.data.id;
+
+            
+            const newAnimal = await createAnimal({
+                name,
+                species,
+                image,
+                bio,
+                gender,
+                ownerId,
+                statusAdoption: true
+            });
+
+            console.log('Animal criado com sucesso:', newAnimal);
+
+        } catch (error) {
+            console.error('Erro ao criar o animal:', error);
+        }
+    };
+
     return (
         <Container>
             <Content>
@@ -41,6 +73,8 @@ const CreatePetProfile: React.FC = () => {
                                 variant="outlined"
                                 placeholder="Name"
                                 fullWidth
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
                                 sx={{
                                     mb: 2,
                                     borderRadius: '12px',
@@ -57,6 +91,8 @@ const CreatePetProfile: React.FC = () => {
                                 multiline
                                 rows={4}
                                 fullWidth
+                                value={bio}
+                                onChange={(e) => setBio(e.target.value)}
                                 sx={{
                                     mb: 2,
                                     borderRadius: '12px',
@@ -76,7 +112,8 @@ const CreatePetProfile: React.FC = () => {
                                 labelId="species-label"
                                 variant="outlined"
                                 id="species-select"
-                                value={null}
+                                value={species}
+                                onChange={(e) => setSpecies(e.target.value as string)}
                                 label="species"
                                 sx={{
                                     borderRadius: '12px',
@@ -93,8 +130,10 @@ const CreatePetProfile: React.FC = () => {
                         </FormControl>
                         <TextField
                             variant="outlined"
-                            placeholder="Breed"
+                            placeholder="Image/Breed"
                             fullWidth
+                            value={image}
+                            onChange={(e) => setImage(e.target.value)}
                             sx={{
                                 mb: 2,
                                 mr: 1,
@@ -125,7 +164,8 @@ const CreatePetProfile: React.FC = () => {
                                 labelId="gender-label"
                                 variant="outlined"
                                 id="gender-select"
-                                value={null}
+                                value={gender}
+                                onChange={(e) => setGender(e.target.value as string)}
                                 label="gender"
                                 sx={{
                                     borderRadius: '12px',
@@ -135,19 +175,37 @@ const CreatePetProfile: React.FC = () => {
                                     },
                                 }}
                             >
-                                <MenuItem value="Masculine">Masculine</MenuItem>
-                                <MenuItem value="Feminine">Feminine</MenuItem>
+                                <MenuItem value="Masculine">Male</MenuItem>
+                                <MenuItem value="Feminine">Female</MenuItem>
                                 <MenuItem value="Unknown">Unknown</MenuItem>
                             </Select>
                         </FormControl>
                     </InputGroup>
+                    <TextField
+                            variant="outlined"
+                            placeholder="Digite o seu e-mail"
+                            fullWidth
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            sx={{
+                                mb: 2,
+                                mr: 1,
+                                borderRadius: '12px',
+                                background: '#E7E5E5',
+                                '& .MuiOutlinedInput-root': {
+                                    borderRadius: '12px',
+                                },
+                            }}
+                        />
                     <Button
                         variant="contained"
+                        onClick={handleSubmit}
                         sx={{
                             background: '#F2B705',
                             color: 'black',
                             borderRadius: '12px',
                             height: '1.85069rem',
+                            marginBottom: '1rem',
                             boxShadow: '2px 4px 0px 1px rgba(30, 30, 30, 0.90)',
                             textTransform: 'none',
                             padding: '10px 20px',
@@ -164,5 +222,6 @@ const CreatePetProfile: React.FC = () => {
         </Container>
     );
 }
+
 
 export default CreatePetProfile;
