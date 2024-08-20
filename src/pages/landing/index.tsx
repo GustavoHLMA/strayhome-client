@@ -5,6 +5,7 @@ import LandingAbout from '@/components/LandingAbout';
 import LandingServices from '@/components/LandingServices';
 import LandingRegister from '@/components/LandingRegister';
 import LandingHedera from '@/components/LandingHedera';
+import LandingFooter from '@/components/footer';
 
 const Landing: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Landing: React.FC = () => {
       <LandingServices />
       <LandingRegister />
       <LandingHedera />
+      <LandingFooter />
     </LandingContainer>
   );
 };

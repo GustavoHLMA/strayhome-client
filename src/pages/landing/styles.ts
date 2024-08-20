@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const LandingContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100vw;
   max-width: 100vw;
   font-family: 'Lato';
   padding: 0;
