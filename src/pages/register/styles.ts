@@ -109,12 +109,13 @@ export const FormSection = styled.div`
   justify-content: center;
   align-items: flex-start;
   font-family: 'Lato';
-  width: 100%;
+  width: 74%;
 
   .form-row {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: column;
     width: 100%;
     margin-bottom: 1rem;
   }
@@ -126,11 +127,19 @@ export const FormSection = styled.div`
     width: 70%; /* Ajuste conforme necessário para expandir os campos */
     margin-left: 20px;
   }
+
+  .input-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Title = styled.div`
   color: #1e1e1e;
-  font-family: Lato;
+  font-family: 'Lato';
   font-size: 3.125rem;
   font-style: normal;
   font-weight: 900;
