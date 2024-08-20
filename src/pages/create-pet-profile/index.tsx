@@ -14,7 +14,7 @@ import {
     ImageUpload,
     InputGroup
 } from './styles';
-import { TextField, Button, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { TextField, Button, FormControl, InputLabel, Select, MenuItem, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material';
 import { createAnimal, getUserByEmail } from '@/services/api';
 
 const CreatePetProfile: React.FC = () => {
@@ -24,6 +24,7 @@ const CreatePetProfile: React.FC = () => {
     const [image, setImage] = useState('');
     const [gender, setGender] = useState('');
     const [email, setEmail] = useState('');
+    const [statusAdoption, setStatusAdoption] = useState(true);
 
     const handleSubmit = async () => {
         try {
@@ -39,7 +40,7 @@ const CreatePetProfile: React.FC = () => {
                 bio,
                 gender,
                 ownerId,
-                statusAdoption: true
+                statusAdoption
             });
 
             console.log('Animal criado com sucesso:', newAnimal);
@@ -144,20 +145,6 @@ const CreatePetProfile: React.FC = () => {
                                 },
                             }}
                         />
-                        <TextField
-                            variant="outlined"
-                            placeholder="Age"
-                            fullWidth
-                            sx={{
-                                mb: 2,
-                                mr: 1,
-                                borderRadius: '12px',
-                                background: '#E7E5E5',
-                                '& .MuiOutlinedInput-root': {
-                                    borderRadius: '12px',
-                                },
-                            }}
-                        />
                         <FormControl fullWidth sx={{ mb: 2 }}>
                             <InputLabel id="gender-label">Gender</InputLabel>
                             <Select
@@ -181,6 +168,21 @@ const CreatePetProfile: React.FC = () => {
                             </Select>
                         </FormControl>
                     </InputGroup>
+
+                    <FormControl component="fieldset" fullWidth sx={{ mb: 2 }}>
+                        <FormLabel component="legend">Este animal está para adoção?</FormLabel>
+                        <RadioGroup
+                            row
+                            aria-label="statusAdoption"
+                            name="statusAdoption"
+                            value={statusAdoption.toString()}
+                            onChange={(e) => setStatusAdoption(e.target.value === 'true')}
+                        >
+                            <FormControlLabel value="true" control={<Radio />} label="Sim" />
+                            <FormControlLabel value="false" control={<Radio />} label="Não" />
+                        </RadioGroup>
+                    </FormControl>            
+
                     <TextField
                             variant="outlined"
                             placeholder="Digite o seu e-mail"
@@ -196,7 +198,7 @@ const CreatePetProfile: React.FC = () => {
                                     borderRadius: '12px',
                                 },
                             }}
-                        />
+                    />
                     <Button
                         variant="contained"
                         onClick={handleSubmit}

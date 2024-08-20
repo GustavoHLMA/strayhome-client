@@ -21,7 +21,7 @@ export const Content = styled.div`
     overflow: hidden;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     width: 61.88rem;
-    height: 42rem;
+    height: 35rem;
     flex-shrink: 0;
     font-family: 'Lato';
 `;
@@ -161,5 +161,8 @@ export const InputGroup = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 0.5rem; /* Reduz o espaço entre os campos */
+    gap: 1rem; /* Espaçamento consistente entre os campos */
+    & > * {
+        flex-grow: 1;
+    }
 `;
