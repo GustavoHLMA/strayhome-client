@@ -35,7 +35,7 @@ export const MissionContainer = styled.div`
   flex-direction: column;
   height: 25vh;
   width: 100vw;
-  background: #2796F8;;
+  background: #2796f8;
   font-family: 'Lato';
   justify-content: center;
   overflow: hidden;
@@ -49,7 +49,7 @@ export const VisionContainer = styled.div`
   flex-direction: column;
   height: 30vh;
   width: 100vw;
-  background: #6726C0;;
+  background: #6726c0;
   font-family: 'Lato';
   justify-content: center;
   overflow: hidden;
@@ -74,5 +74,4 @@ export const Text = styled.p`
   line-height: 130.35%;
   margin-top: 0.81vh;
   overflow: hidden;
-
 `;
