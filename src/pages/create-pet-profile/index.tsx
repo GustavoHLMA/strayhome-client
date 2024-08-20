@@ -225,5 +225,4 @@ const CreatePetProfile: React.FC = () => {
     );
 }
 
-
 export default CreatePetProfile;
