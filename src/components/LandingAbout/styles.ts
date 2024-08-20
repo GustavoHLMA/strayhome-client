@@ -1,6 +1,47 @@
 import styled from '@emotion/styled';
 
+export const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  font-family: 'Lato';
+  padding: 0;
+  margin: 0;
+  border: 0;
+  z-index: 1;
+  background-color: #f7f7f7;
+  overflow: hidden;
+`;
+
 export const AboutContainer = styled.div`
+  display: flex;
+  padding-left: 5.63vw;
+  padding-top: 3.62vh;
+  padding-bottom: 3.62vh;
+  flex-direction: column;
+  height: 25vh;
+  width: 100vw;
+  background: #f25c05;
+  font-family: 'Lato';
+  justify-content: center;
+  overflow: hidden;
+`;
+
+export const MissionContainer = styled.div`
+  display: flex;
+  padding-left: 5.63vw;
+  padding-top: 3.62vh;
+  padding-bottom: 3.62vh;
+  flex-direction: column;
+  height: 25vh;
+  width: 100vw;
+  background: #2796F8;;
+  font-family: 'Lato';
+  justify-content: center;
+  overflow: hidden;
+`;
+
+export const VisionContainer = styled.div`
   display: flex;
   padding-left: 5.63vw;
   padding-top: 3.62vh;
@@ -8,10 +49,10 @@ export const AboutContainer = styled.div`
   flex-direction: column;
   height: 30vh;
   width: 100vw;
-  background: #f25c05;
+  background: #6726C0;;
   font-family: 'Lato';
-  z-index: 1;
   justify-content: center;
+  overflow: hidden;
 `;
 
 export const BigText = styled.h1`
@@ -21,6 +62,7 @@ export const BigText = styled.h1`
   font-style: normal;
   font-weight: 900;
   line-height: 108.036%;
+  overflow: hidden;
 `;
 
 export const Text = styled.p`
@@ -31,4 +73,6 @@ export const Text = styled.p`
   font-weight: 400;
   line-height: 130.35%;
   margin-top: 0.81vh;
+  overflow: hidden;
+
 `;

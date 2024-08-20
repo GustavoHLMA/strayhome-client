@@ -1,14 +1,14 @@
 import React from 'react';
-import { HomeContainer } from './styles';
+import { LandingContainer } from './styles';
 import HomeLanding from '@/components/LandingHome';
 import LandingAbout from '@/components/LandingAbout';
 
 const Landing: React.FC = () => {
   return (
-    <HomeContainer>
+    <LandingContainer>
       <HomeLanding />
       <LandingAbout />
-    </HomeContainer>
+    </LandingContainer>
   );
 };
 

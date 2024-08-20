@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 
-export const HomeContainer = styled.div`
+export const LandingContainer = styled.div`
   display: flex;
-  padding: 0px;
-  border: 0px;
-  margin: 0px;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
   font-family: 'Lato';
+  padding: 0;
+  margin: 0;
+  border: 0;
 `;

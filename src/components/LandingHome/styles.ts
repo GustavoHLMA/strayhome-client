@@ -2,13 +2,12 @@ import styled from '@emotion/styled';
 
 export const HomeContainer = styled.div`
   display: flex;
-  padding: 0px;
   padding-left: 4.25vw;
   padding-top: 2.87vh;
-  border: 0px;
-  margin: 0px;
+  padding-right: 0;
+  margin-right: 0;
   flex-direction: column;
-  height: 100vh;
+  height: 75vh;
   width: 100vw;
   background: linear-gradient(0deg, #6726c0 0%, #6726c0 100%), #f2b705;
   font-family: 'Lato';
@@ -73,7 +72,7 @@ export const CustomButton = styled.button`
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  margin-top: 2.5vh;
+  margin-top: 5.5vh;
 `;
 
 export const NavButton = styled.button`
