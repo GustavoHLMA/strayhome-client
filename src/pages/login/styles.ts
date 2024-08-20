@@ -21,7 +21,7 @@ export const Content = styled.div`
   overflow: hidden;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   width: 63.88rem;
-  height: 34rem;
+  height: 25rem;
   flex-shrink: 0;
   font-family: 'Lato';
 `;
@@ -147,25 +147,6 @@ export const Title = styled.div`
   margin-top: 11px;
 `;
 
-export const ImageUpload = styled.div`
-  width: 12rem;
-  height: calc(
-    4.875rem + 1.5rem + 5rem + 1.5rem
-  ); /* Altura combinada dos campos */
-  background-color: #e5e5e5;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .image-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #7a7a7a;
-  }
-`;
-
 export const InputGroup = styled.div`
   display: flex;
   justify-content: space-between;
@@ -181,6 +162,5 @@ export const Text = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: 108.036%; /* 1.01281rem */
-  margin-bottom: 1rem;
   cursor: pointer;
 `;

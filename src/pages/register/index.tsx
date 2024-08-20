@@ -11,10 +11,12 @@ import {
   PawImage4,
   PawImage5,
   Title,
-  InputGroup
+  InputGroup,
+  Text
 } from './styles';
 import { TextField, Button } from '@mui/material';
 import { createUser } from '@/services/api';
+import { useRouter } from 'next/router';
 
 const Register: React.FC = () => {
   const [name, setName] = useState('');
@@ -40,9 +42,17 @@ const Register: React.FC = () => {
       });
 
       console.log('User created successfully:', newUser);
+      alert('User created successfully!');
+      router.push('/login');
     } catch (error) {
       console.error('Error creating user:', error);
+      alert('Error creating user. Please try again.');
     }
+  };
+
+  const router = useRouter();
+  const navigateToLogin = () => {
+    router.push('/login'); // Redireciona para a página de login
   };
 
   return (
@@ -58,6 +68,20 @@ const Register: React.FC = () => {
         </LogoSection>
         <FormSection>
           <Title>Register</Title>
+          <Text
+            style={{ fontSize: '0.9rem', color: '#6e6e6e', marginTop: '1rem' }}
+            onClick={navigateToLogin}
+          >
+            I already have{' '}
+            <span
+              style={{ color: 'orange', cursor: 'pointer' }}
+              onClick={navigateToLogin}
+            >
+              an account
+            </span>
+            .
+          </Text>
+
           <div className="form-row">
             <div className="input-row">
               <TextField
@@ -168,6 +192,13 @@ const Register: React.FC = () => {
               }}
             />
           </InputGroup>
+          <Text
+            style={{ fontSize: '0.9rem', color: '#6e6e6e', marginTop: '1rem' }}
+          >
+            By signing in you agree to Stray Home’s{' '}
+            <span style={{ color: 'orange' }}>terms of use</span>.
+          </Text>
+
           <Button
             variant="contained"
             onClick={handleSubmit}
