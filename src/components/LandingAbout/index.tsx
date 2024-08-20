@@ -10,7 +10,7 @@ import {
 
 const LandingAbout: React.FC = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id="about">
       <AboutContainer>
         <BigText>About</BigText>
         <Text>

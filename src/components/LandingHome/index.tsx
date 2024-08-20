@@ -15,8 +15,15 @@ import { LandingImagePng } from '@/assets';
 import { YellowLogo } from '@/assets';
 
 const LandingHome: React.FC = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <HomeContainer>
+    <HomeContainer id="home">
       <NavbarContainer>
         <LogoContainer>
           <Image
@@ -24,14 +31,18 @@ const LandingHome: React.FC = () => {
             alt="Stray Home Logo"
             layout="fill"
             objectFit="cover"
-            quality={90}
+            quality={100}
             priority={true}
           />
         </LogoContainer>
-        <NavButton>Home</NavButton>
-        <NavButton>About</NavButton>
-        <NavButton>Services</NavButton>
-        <StartNowButton>Start Now</StartNowButton>
+        <NavButton onClick={() => scrollToSection('home')}>Home</NavButton>
+        <NavButton onClick={() => scrollToSection('about')}>About</NavButton>
+        <NavButton onClick={() => scrollToSection('services')}>
+          Services
+        </NavButton>
+        <StartNowButton onClick={() => scrollToSection('register')}>
+          Start Now
+        </StartNowButton>
       </NavbarContainer>
       <BigText>Connecting Hearts and Paws</BigText>
       <Text>

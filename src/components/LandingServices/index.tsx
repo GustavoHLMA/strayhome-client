@@ -15,7 +15,7 @@ import { BlueLogo, RedCat, YellowDog, BlueBunny } from '@/assets';
 
 const LandingServices: React.FC = () => {
   return (
-    <ServicesContainer>
+    <ServicesContainer id="services">
       <RowContainer>
         <BigText>With </BigText>
         <LogoContainer>

@@ -34,7 +34,6 @@ export const MissionContainer = styled.div`
   padding-bottom: 3.62vh;
   flex-direction: column;
   height: 25vh;
-  width: 100vw;
   background: #2796f8;
   font-family: 'Lato';
   justify-content: center;
@@ -47,7 +46,7 @@ export const VisionContainer = styled.div`
   padding-top: 3.62vh;
   padding-bottom: 3.62vh;
   flex-direction: column;
-  height: 30vh;
+  height: 25vh;
   width: 100vw;
   background: #6726c0;
   font-family: 'Lato';

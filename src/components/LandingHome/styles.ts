@@ -6,6 +6,7 @@ export const HomeContainer = styled.div`
   padding-top: 2.87vh;
   padding-right: 0;
   margin-right: 0;
+  border: 0;
   flex-direction: column;
   height: 75vh;
   width: 100vw;
@@ -32,10 +33,11 @@ export const ImageContainer = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  width: 50vw;
+  width: 50.5vw;
   height: 100vh;
   z-index: 0;
   overflow: hidden;
+  z-index: 0;
 `;
 
 export const BigText = styled.h1`
@@ -66,6 +68,7 @@ export const CustomButton = styled.button`
   background: #f2b705;
   box-shadow: 1px 2px 0px 1px rgba(30, 30, 30, 0.9);
   cursor: pointer;
+  border: solid 0.0625vw #1e1e1e;
 
   color: #1e1e1e;
   font-size: 1.3125vw;
