@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://strayhome-server.onrender.com/'
+  baseURL: 'https://strayhome-server.onrender.com'
 });
 
 export default api;
@@ -118,6 +118,17 @@ export const createUser = async ({
     return response.data;
   } catch (error) {
     console.error('Error creating user', error);
+    throw new Error();
+  }
+};
+
+export const getCampaignById = async (campaignId: string) => {
+  try {
+    const response = await api.get(`/campaign/${campaignId}`);
+
+    return response.data;
+  } catch (error) {
+    console.error('Error getting campaign by ID', error);
     throw new Error();
   }
 };
