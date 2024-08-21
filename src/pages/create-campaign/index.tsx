@@ -21,7 +21,6 @@ const CreateCampaign: React.FC = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [email, setEmail] = useState('');
-  const [image, setImage] = useState('');
   const [target, setTarget] = useState(0);
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
   const [deadline, setDeadline] = useState<Date | undefined>(undefined);
