@@ -74,7 +74,7 @@ export const Target = styled.div`
 export const Description = styled.p`
   font-size: 1rem;
   color: #333;
-  margin-bottom: 7rem;
+  margin-bottom: 6.4rem;
 `;
 
 export const Dates = styled.div`
