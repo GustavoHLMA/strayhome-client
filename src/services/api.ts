@@ -122,17 +122,13 @@ export const createUser = async ({
   }
 };
 
-
-export const getCampaignById = async(campaignId: string) => {
+export const getCampaignById = async (campaignId: string) => {
   try {
+    const response = await api.get(`/campaign/${campaignId}`);
 
-    const response = await api.get(`/campaign/${campaignId}`)
-
-    return response.data
-
+    return response.data;
   } catch (error) {
     console.error('Error getting campaign by ID', error);
     throw new Error();
-
   }
-}
+};

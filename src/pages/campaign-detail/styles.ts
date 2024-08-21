@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  background: #FEB;
+  background: #feb;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  background: #FFE7A0;
+  background: #ffe7a0;
   display: flex;
   overflow: hidden;
   align-items: center;
@@ -35,12 +35,11 @@ export const ImageContainer = styled.div`
   align-items: center;
 `;
 
-
 export const Image = styled.img`
   width: 18rem; /* Aumentando para corresponder ao design desejado */
   height: 200px;
   border-radius: 10px;
-  
+
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
@@ -66,9 +65,9 @@ export const Target = styled.div`
   font-weight: bold;
 
   span {
-    color: #7B52AB;
+    color: #7b52ab;
     font-weight: bold;
-    color: #8257E5;
+    color: #8257e5;
   }
 `;
 
@@ -82,14 +81,14 @@ export const Dates = styled.div`
   font-size: 1.1rem;
   color: #555;
   margin-top: 1rem;
-  
+
   span {
     font-weight: bold;
   }
 `;
 
 export const DonateButton = styled.button`
-  background-color: #F2B705;
+  background-color: #f2b705;
   color: #000;
   padding: 10px 20px;
   font-size: 1rem;
@@ -97,7 +96,7 @@ export const DonateButton = styled.button`
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 2px 4px 0px 1px rgba(30, 30, 30, 0.90);
+  box-shadow: 2px 4px 0px 1px rgba(30, 30, 30, 0.9);
   transition: background-color 0.3s ease;
   font-family: 'Lato';
 
@@ -112,7 +111,7 @@ export const BackButton = styled.button`
   left: 20px;
   background: none;
   border: none;
-  color: #7B52AB;
+  color: #7b52ab;
   margin-top: 4.2rem;
   font-size: 1.2rem;
   cursor: pointer;
@@ -120,6 +119,6 @@ export const BackButton = styled.button`
   transition: color 0.3s ease;
 
   &:hover {
-    color: #8257E5;
+    color: #8257e5;
   }
 `;
